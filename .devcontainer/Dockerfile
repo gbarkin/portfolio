@@ -7,6 +7,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     build-essential \
     libpq-dev \
     libsqlite3-dev \
+    postgresql-client \
     nodejs \
     yarn \
   && rm -rf /var/lib/apt/lists/*
