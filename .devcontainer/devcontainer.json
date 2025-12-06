@@ -7,13 +7,9 @@
     "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
-    },
-    "ghcr.io/devcontainers/features/postgres:1": {
-      "version": "16",
-      "password": "postgres"
     }
   },
-  "forwardPorts": [3000, 5432],
-  "postCreateCommand": "bundle install || true",
-  "remoteUser": "vscode"
+  "forwardPorts": [3000],
+  "remoteUser": "vscode",
+  "postCreateCommand": "sudo service postgresql start || true"
 }
