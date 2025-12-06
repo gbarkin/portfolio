@@ -1,0 +1,22 @@
+{
+  "name": "Ruby on Rails Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/postgres-client:1": {}
+  },
+  "postCreateCommand": "bundle install || true",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Rails server",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteUser": "vscode"
+}
