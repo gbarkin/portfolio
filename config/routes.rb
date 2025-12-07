@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  get "data_science/product_management"
-  get "data_science/blog"
-  get "data_science/music"
-  get "pages/home"
   root "pages#home"
-  get "/data-science",      to: "pages#data_science"
+  get "/projects",      to: "pages#projects"
   get "/product-management", to: "pages#product_management"
   get "/blog",              to: "pages#blog"
   get "/music",             to: "pages#music"
